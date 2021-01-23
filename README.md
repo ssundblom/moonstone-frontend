@@ -1,6 +1,10 @@
 #  Moonstone
 
 
+## How what wha? 
+Structured the folders after the atomic system system?
+
+
 ## Usage
 
 1. On GitHub, click the 'use this template' button to create a new repo on your account
