@@ -8,10 +8,6 @@ const HeaderContainer = styled.div`
   margin: auto;
 
 `
-const HeaderTwo = styled.div`
-  font-size: 20px;
-  color: #6C6C5D;
-`
 export const App = () => {
   return (
     <HeaderContainer>
