@@ -1,18 +1,16 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
+
 
 import { Header } from './components/organisms/Header'
 import { theme } from './theme'
 
-const HeaderContainer = styled.div`
-  display: flex;
-  margin: auto;
-
-`
 export const App = () => {
   return (
-    <HeaderContainer>
+    <Container>
       <Header theme={theme} />
-    </HeaderContainer>
+    </Container>
   )
 }
