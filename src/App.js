@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import { Header } from './components/organisms/Header'
+import { theme } from './theme'
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ const HeaderContainer = styled.div`
 export const App = () => {
   return (
     <HeaderContainer>
-      <Header />
+      <Header theme={theme} />
     </HeaderContainer>
   )
 }

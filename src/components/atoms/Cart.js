@@ -5,8 +5,8 @@ import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faShoppingBag)
 
-export const Cart = () => {
+export const Cart = (props) => {
   return (
-    <FontAwesomeIcon icon="shopping-bag" />
+    <FontAwesomeIcon icon="shopping-bag" color={props.theme.colors.secondary} />
   )
 }
