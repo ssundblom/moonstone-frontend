@@ -1,16 +1,28 @@
 import React from 'react'
-import styled from 'styled-components/macro'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
+import { theme } from './theme'
 
 import { Header } from './components/organisms/Header'
-import { theme } from './theme'
+import { Home } from './components/pages/Home'
+import { Shop } from './components/pages/Shop'
+import { Articles } from './components/pages/Articles'
+import { About } from './components/pages/About'
 
 export const App = () => {
   return (
     <Container>
-      <Header theme={theme} />
+      <Router>
+        <Header theme={theme} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/shop" component={Shop} />
+          <Route path="/articles" component={Articles} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </Router>
     </Container>
   )
 }
