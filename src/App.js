@@ -1,9 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
-import { theme } from './theme'
+import 'theme.css'
 
 import { Header } from './components/organisms/Header'
 import { Home } from './components/pages/Home'
@@ -15,7 +14,7 @@ export const App = () => {
   return (
     <Container>
       <Router>
-        <Header theme={theme} />
+        <Header />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/shop" component={Shop} />
