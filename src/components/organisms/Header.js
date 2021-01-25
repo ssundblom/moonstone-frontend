@@ -1,18 +1,19 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
-
-import { Hamburger } from '../atoms/Hamburger'
-import { Cart } from '../atoms/Cart'
 import { ReactComponent as Logo } from '../../assets/images/logo.svg'
+
+
+import { Cart } from '../atoms/Cart'
 
 export const Header = (props) => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar collapseOnSelect sticky="top" bg="light" expand="lg">
       <LinkContainer to="/" >
-        <Navbar.Brand>Moonstone</Navbar.Brand>
+        <Navbar.Brand className="order-1 mx-auto"><Logo alt="page logo" />
+</Navbar.Brand>
       </LinkContainer>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle className="order-0" aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="navbar">
         <Nav className="navbar-auto">
           <LinkContainer to="/shop">
@@ -26,15 +27,7 @@ export const Header = (props) => {
           </LinkContainer>
         </Nav>
       </Navbar.Collapse>
+      <Cart {...props} />
     </Navbar>
   )
-
-
-  // return (
-  //   <>
-  //     <Hamburger {...props} />
-  //     <Logo alt="page logo" />
-  //     <Cart {...props} />
-  //   </>
-  // )
 }
