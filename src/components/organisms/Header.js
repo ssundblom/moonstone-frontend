@@ -16,7 +16,7 @@ const StyledLogo = styled(Image)`
   margin-top: -10px;
 `
 
-export const Header = (props) => {
+export const Header = () => {
   return (
     <Navbar collapseOnSelect sticky="top" expand="lg">
 
