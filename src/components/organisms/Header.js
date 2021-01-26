@@ -18,7 +18,7 @@ const StyledLogo = styled(Image)`
 
 export const Header = () => {
   return (
-    <Navbar collapseOnSelect sticky="top" expand="lg">
+    <Navbar bg="light" collapseOnSelect sticky="top" expand="lg">
 
       <StyledHamburger className="order-0" aria-controls="basic-navbar-nav" />
 
@@ -43,8 +43,6 @@ export const Header = () => {
           </LinkContainer>
         </Nav>
       </Navbar.Collapse>
-
-
     </Navbar>
   )
 }

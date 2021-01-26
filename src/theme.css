@@ -32,7 +32,7 @@
   --info: #848480;
   --warning: #ffe682;
   --danger: #c9632d;
-  --light: #FFF1E6;
+  --light: #F8F4FA;
   --dark: #ddbea9;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
@@ -1483,8 +1483,8 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-light {
   color: #212529;
-  background-color: #FFF1E6;
-  border-color: #FFF1E6
+  background-color: var(--light);
+  border-color: var(--light)
 }
 
 .btn-light:hover {
@@ -1502,8 +1502,8 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-light.disabled, .btn-light:disabled {
   color: #212529;
-  background-color: #FFF1E6;
-  border-color: #FFF1E6
+  background-color: var(--light);
+  border-color: var(--light)
 }
 
 .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active, .show>.btn-light.dropdown-toggle {
@@ -1732,14 +1732,14 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 
 .btn-outline-light {
-  color: #FFF1E6;
-  border-color: #FFF1E6
+  color: var(--light);
+  border-color: var(--light)
 }
 
 .btn-outline-light:hover {
   color: #212529;
-  background-color: #FFF1E6;
-  border-color: #FFF1E6
+  background-color: var(--light);
+  border-color: var(--light)
 }
 
 .btn-outline-light:focus, .btn-outline-light.focus {
@@ -1747,14 +1747,14 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 
 .btn-outline-light.disabled, .btn-outline-light:disabled {
-  color: #FFF1E6;
+  color: var(--light);
   background-color: transparent
 }
 
 .btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active, .show>.btn-outline-light.dropdown-toggle {
   color: #212529;
-  background-color: #FFF1E6;
-  border-color: #FFF1E6
+  background-color: var(--light);
+  border-color: var(--light)
 }
 
 .btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus, .show>.btn-outline-light.dropdown-toggle:focus {
@@ -3699,7 +3699,7 @@ a.badge-danger:focus, a.badge-danger.focus {
 
 .badge-light {
   color: #212529;
-  background-color: #FFF1E6
+  background-color: var(--light)
 }
 
 a.badge-light:hover, a.badge-light:focus {
@@ -5130,7 +5130,7 @@ a.bg-danger:hover, a.bg-danger:focus, button.bg-danger:hover, button.bg-danger:f
 }
 
 .bg-light {
-  background-color: #FFF1E6 !important
+  background-color: var(--light) !important
 }
 
 a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus {
@@ -5218,7 +5218,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .border-light {
-  border-color: #FFF1E6 !important
+  border-color: var(--light) !important
 }
 
 .border-dark {
@@ -7920,7 +7920,7 @@ a.text-danger:hover, a.text-danger:focus {
 }
 
 .text-light {
-  color: #FFF1E6 !important
+  color: var(--light) !important
 }
 
 a.text-light:hover, a.text-light:focus {
