@@ -20,11 +20,8 @@ export const Shop = () => {
     <>
       { products.map(product => {
         return <ProductCard key={product._id} {...product} />
-
       })
       }
-
-
     </>
   )
 }

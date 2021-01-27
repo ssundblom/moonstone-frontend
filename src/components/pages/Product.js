@@ -23,6 +23,7 @@ export const Product = () => {
 
   return (
     <Container >
+
       <Row>
         <Col>
           <Image />
