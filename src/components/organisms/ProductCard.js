@@ -2,12 +2,13 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { LinkContainer } from 'react-router-bootstrap'
+import { Image } from 'cloudinary-react'
 
-export const ProductCard = ({ name, price, _id, img }) => {
+export const ProductCard = ({ name, price, _id, images }) => {
   return (
     <Card>
 
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Image variant="top" publicId={images[0]}/>
       <Card.Body>
         <LinkContainer to={`/shop/${_id}`}>
           <Card.Title> {name} </Card.Title>

@@ -19,16 +19,14 @@ const StyledLogo = styled(Image)`
 export const Header = () => {
   return (
     <Navbar bg="light" collapseOnSelect sticky="top" expand="lg">
-
       <StyledHamburger className="order-0" aria-controls="basic-navbar-nav" />
 
       <LinkContainer to="/" >
         <Navbar.Brand className="order-1 mx-auto">
-          <StyledLogo src={`${process.env.PUBLIC_URL}/logo.svg`} />
+          <StyledLogo src={`${process.env.PUBLIC_URL}/logo.svg`}/>
         </Navbar.Brand>
       </LinkContainer>
 
-      <Icon icon="shopping-bag" className="order-2" size="lg" color="var(--secondary)"/>
 
       <Navbar.Collapse id="navbar">
         <Nav className="navbar-auto">
@@ -43,6 +41,9 @@ export const Header = () => {
           </LinkContainer>
         </Nav>
       </Navbar.Collapse>
+
+      <Icon icon="shopping-bag" className="order-2" size="lg" color="var(--secondary)"/>
+
     </Navbar>
   )
 }

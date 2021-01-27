@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
+import { CloudinaryContext } from 'cloudinary-react'
 
 import 'theme.css'
 
@@ -13,17 +14,19 @@ import { Product } from './components/pages/Product'
 
 export const App = () => {
   return (
-    <Container>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/shop" component={Shop} />
-          <Route path="/shop/:productId" component={Product} />
-          <Route path="/articles" component={Articles} />
-          <Route path="/about" component={About} />
-        </Switch>
-      </Router>
-    </Container>
+    <CloudinaryContext cloudName="moonstone-space">
+      <Container>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/shop" component={Shop} />
+            <Route path="/shop/:productId" component={Product} />
+            <Route path="/articles" component={Articles} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </Router>
+      </Container>
+    </CloudinaryContext>
   )
 }
