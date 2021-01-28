@@ -14,7 +14,7 @@ export const Home = () => {
         <Col><p> Find the perfect selection of soul-nurturing goodies, for you</p> </Col>
       </Row>
       <Row>
-        <Button>Create your mix</Button>
+        <Link to="/create-mix"> <Button>Create your mix</Button></Link>
       </Row>
       <Row>
         <Col>
