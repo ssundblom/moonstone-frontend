@@ -19,11 +19,7 @@ export const CreateMix = () => {
             Where, or with what, do you feel like you need some extra support?</p>
         </Col>
       </Row>
-      <Row>
-        <Col>
-          <CheckboxList />
-        </Col>
-      </Row>
+      <CheckboxList />
       <Row>
         <Col>
           <Link to="shop">  <Button>Continue</Button></Link>

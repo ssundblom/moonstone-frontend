@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 import { CloudinaryContext } from 'cloudinary-react'
 
+import 'bootstrap/dist/css/bootstrap.css'
 import 'theme.css'
 
 import { Header } from './components/organisms/Header'
@@ -16,7 +17,6 @@ import { CreateMix } from './components/pages/CreateMix'
 export const App = () => {
   return (
     <CloudinaryContext cloudName="moonstone-space">
-      <Container>
         <Router>
           <Header />
           <Switch>
@@ -28,7 +28,6 @@ export const App = () => {
             <Route path="/about" component={About} />
           </Switch>
         </Router>
-      </Container>
     </CloudinaryContext>
   )
 }
