@@ -43,6 +43,6 @@ library.add(
 
 export const Icon = (props) => {
   return (
-    <FontAwesomeIcon icon={props.icon} color={props.color} size={props.size} />
+    <FontAwesomeIcon icon={props.icon} color={props.color} size={props.size}  />
   )
 }

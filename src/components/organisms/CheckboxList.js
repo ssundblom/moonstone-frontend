@@ -21,7 +21,7 @@ export const CheckboxList = () => {
 
   const items = [
     { name: 'Love', content: <Icon icon="heart" size="lg" color="var(--white)"/>},
-    { name: 'Inner Peace', content: <Icon icon="water" size="lg" color="var(--white)"/> },
+    { name: 'Calm', content: <Icon icon="water" size="lg" color="var(--white)"/> },
     { name: 'Protection', content: <Icon icon="hamsa" size="lg" color="var(--white)"/> },
     { name: 'Power', content: <Icon icon="fire-alt" size="lg" color="var(--white)"/> },
     { name: 'Spirituality', content: <Icon icon="praying-hands" size="lg" color="var(--white)"/> },
@@ -43,7 +43,7 @@ export const CheckboxList = () => {
           {items.map((item, index) => (
             <Col key={item.name + index} className="my-3">
               <ToggleButtonGroup type="checkbox" aria-label={item.name}>
-                <ToggleButton variant="dark" value={item.name}>
+                <ToggleButton variant="success" value={item.name}>
                   {item.content}
                 </ToggleButton>
               </ToggleButtonGroup>
