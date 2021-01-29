@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 
 import { CheckboxList } from '../organisms/CheckboxList'
-import { Checkbox } from 'components/atoms/Checkbox'
 
 export const CreateMix = () => {
   return (

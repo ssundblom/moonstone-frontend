@@ -9,6 +9,8 @@ import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
 import ToggleButton from 'react-bootstrap/ToggleButton'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 
+import { Icon } from '../atoms/Icon'
+
 
 const StyledToggleButton = styled(ToggleButton)`
   border-radius: 50%;
@@ -18,18 +20,21 @@ export const CheckboxList = () => {
   //const [values, setValues] = useState([])
 
   const items = [
-    { name: 'Love', content: '1' },
-    { name: 'Calmness', content: '2' },
-    { name: 'Healing', content: '3' },
-    { name: 'Relationship', content: '4' },
-    { name: 'Clarity', content: '5' },
-    { name: 'Mind', content: '6' },
-    { name: 'Love', content: '7' },
-    { name: 'Calmness', content: '8' },
-    { name: 'Healing', content: '9' },
-    { name: 'Relationship', content: '10' },
-    { name: 'Clarity', content: '11' },
-    { name: 'Mind', content: '12' },
+    { name: 'Love', content: <Icon icon="heart" size="lg" color="var(--white)"/>},
+    { name: 'Inner Peace', content: <Icon icon="water" size="lg" color="var(--white)"/> },
+    { name: 'Protection', content: <Icon icon="hamsa" size="lg" color="var(--white)"/> },
+    { name: 'Power', content: <Icon icon="fire-alt" size="lg" color="var(--white)"/> },
+    { name: 'Spirituality', content: <Icon icon="praying-hands" size="lg" color="var(--white)"/> },
+    { name: 'Relationship', content: <Icon icon="hand-holding-heart" size="lg" color="var(--white)"/> },
+    { name: 'Clarity', content: <Icon icon="eye" size="lg" color="var(--white)"/> },
+    { name: 'Creativity', content: <Icon icon="palette" size="lg" color="var(--white)"/> },
+    { name: 'Success', content: <Icon icon="chart-line" size="lg" color="var(--white)"/> },
+    { name: 'Manifestation', content: <Icon icon="seedling" size="lg" color="var(--white)"/> },
+    { name: 'Dreams', content: <Icon icon="moon" size="lg" color="var(--white)"/> },
+    { name: 'Energy', content: <Icon icon="bolt" size="lg" color="var(--white)"/> },
+    { name: 'Abundance', content: <Icon icon="atom" size="lg" color="var(--white)"/> },
+    { name: 'Change', content: <Icon icon="exchange-alt" size="lg" color="var(--white)"/> },
+    { name: 'Motivation', content: <Icon icon="fist-raised" size="lg" color="var(--white)"/> },
   ]
 
   return (
@@ -38,7 +43,7 @@ export const CheckboxList = () => {
           {items.map((item, index) => (
             <Col key={item.name + index} className="my-3">
               <ToggleButtonGroup type="checkbox" aria-label={item.name}>
-                <ToggleButton value={item.name}>
+                <ToggleButton variant="dark" value={item.name}>
                   {item.content}
                 </ToggleButton>
               </ToggleButtonGroup>
