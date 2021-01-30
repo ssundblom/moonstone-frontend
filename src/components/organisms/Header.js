@@ -1,5 +1,9 @@
 import React from 'react'
-import { Navbar, Nav, Image } from 'react-bootstrap'
+
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import Image from 'react-bootstrap/Image'
+
 import { LinkContainer } from 'react-router-bootstrap'
 import styled from 'styled-components'
 
@@ -18,16 +22,22 @@ const StyledLogo = styled(Image)`
 
 export const Header = () => {
   return (
-    <Navbar bg="light" collapseOnSelect sticky="top" expand="lg">
+    <Navbar collapseOnSelect sticky="top" expand="lg">
       <StyledHamburger aria-controls="basic-navbar-nav" />
 
-      <LinkContainer to="/" >
-        <Navbar.Brand className="mx-auto">
-          <StyledLogo src={`${process.env.PUBLIC_URL}/logo.svg`}/>
-        </Navbar.Brand>
+      <LinkContainer className="order-lg-0" to="/" >
+        <Nav.Link>
+          <Navbar.Brand className="mx-auto">
+            <StyledLogo src={`${process.env.PUBLIC_URL}/logo.svg`} />
+          </Navbar.Brand>
+        </Nav.Link>
       </LinkContainer>
 
-      <Icon icon="shopping-bag" size="lg" color="var(--secondary)"/>
+      <LinkContainer className="order-lg-3" to="/shop">
+        <Nav.Link>
+          <Icon icon="shopping-bag" size="lg" color="var(--secondary)" />
+        </Nav.Link>
+      </LinkContainer>
 
       <Navbar.Collapse id="navbar">
         <Nav className="navbar-auto">
@@ -42,7 +52,6 @@ export const Header = () => {
           </LinkContainer>
         </Nav>
       </Navbar.Collapse>
-
 
     </Navbar>
   )

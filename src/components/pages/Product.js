@@ -23,7 +23,6 @@ export const Product = () => {
 
   return (
     <Container >
-
       <Row>
         <Col>
           <Image />
@@ -32,17 +31,17 @@ export const Product = () => {
       <Row>
         <Col> <h3>{product.name}</h3></Col>
       </Row>
-      <Row> 
-      <Col> {product.price}kr </Col>
+      <Row>
+        <Col> {product.price}kr </Col>
       </Row>
-      <Row> 
-      <Button>Buy</Button>
+      <Row>
+        <Button>Buy</Button>
       </Row>
-      <Row> 
-      <Col> <b>Soul Powers:</b> <p>{product.soulPowers}</p></Col>
+      <Row>
+        <Col> <b>Soul Powers:</b> <p>{product.soulPowers}</p></Col>
       </Row>
-      <Row> 
-      <Col> <b>About:</b> <p>{product.description}</p></Col>
+      <Row>
+        <Col> <b>About:</b> <p>{product.description}</p></Col>
       </Row>
     </Container>
   )

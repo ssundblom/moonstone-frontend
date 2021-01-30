@@ -10,8 +10,6 @@ export const Shop = () => {
         return res.json()
       })
       .then(productsJson => {
-        console.log(productsJson)
-
         setProducts(productsJson)
       })
   }, [])

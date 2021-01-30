@@ -7,8 +7,7 @@ import { Image } from 'cloudinary-react'
 export const ProductCard = ({ name, price, _id, images }) => {
   return (
     <Card>
-
-      <Image variant="top" publicId={images[0]}/>
+      <Image variant="top" publicId={images[0]} />
       <Card.Body>
         <LinkContainer to={`/shop/${_id}`}>
           <Card.Title> {name} </Card.Title>

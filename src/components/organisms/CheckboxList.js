@@ -13,12 +13,13 @@ import { Icon } from '../atoms/Icon'
 
 
 const StyledToggleButton = styled(ToggleButton)`
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 `
 
 export const CheckboxList = () => {
