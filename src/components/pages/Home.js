@@ -9,18 +9,12 @@ import { Link } from 'react-router-dom'
 
 export const Home = () => {
   return (
-    <Container>
-      <Row>
+    <Container className="text-center justify-content-md-center">
         <Col><p> Find the perfect selection of soul-nurturing goodies, for you</p> </Col>
-      </Row>
-      <Row>
-        <Link to="/create-mix"> <Button>Create your mix</Button></Link>
-      </Row>
-      <Row>
+        <Col><Link to="/create-mix"> <Button>Create your mix</Button></Link></Col>
         <Col>
           <Link to="/shop">Or browse all products</Link>
         </Col>
-      </Row>
     </Container>
   )
 }

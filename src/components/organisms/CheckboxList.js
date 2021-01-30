@@ -14,6 +14,11 @@ import { Icon } from '../atoms/Icon'
 
 const StyledToggleButton = styled(ToggleButton)`
   border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export const CheckboxList = () => {
@@ -39,13 +44,13 @@ export const CheckboxList = () => {
 
   return (
       <ButtonToolbar>
-        <Row className="text-center justify-content-md-center" xs="3" sm="3" md="3" lg="3" xl="3">
+        <Row  xs="3" sm="3" md="3" lg="3" xl="3">
           {items.map((item, index) => (
             <Col key={item.name + index} className="my-3">
               <ToggleButtonGroup type="checkbox" aria-label={item.name}>
-                <ToggleButton variant="success" value={item.name}>
+                <StyledToggleButton variant="success" value={item.name}>
                   {item.content}
-                </ToggleButton>
+                </StyledToggleButton>
               </ToggleButtonGroup>
               <p>{item.name}</p>
             </Col>

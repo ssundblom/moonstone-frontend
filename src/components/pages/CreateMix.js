@@ -11,7 +11,7 @@ import { CheckboxList } from '../organisms/CheckboxList'
 
 export const CreateMix = () => {
   return (
-    <Container>
+    <Container className="text-center justify-content-md-center">
       <Row>
         <Col>
           <p> Ok, we all know life can be tricky at times.
@@ -21,7 +21,7 @@ export const CreateMix = () => {
       <CheckboxList />
       <Row>
         <Col>
-          <Link to="shop">  <Button>Continue</Button></Link>
+          <Link to="/shop">  <Button>Continue</Button></Link>
         </Col>
       </Row>
     </Container>
