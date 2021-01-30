@@ -13,28 +13,14 @@ import { CheckboxList } from '../organisms/CheckboxList'
 export const CreateMix = () => {
   const [selection, setSelection] = useState([])
 
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    console.log(event)
-  }  
-
-const handleChange = (value, event) => {
-  if (value[0]) {
-    setSelection(selection.concat(value[0]))
-  } else {
-    setSelection(selection.filter(item => item !== event.target.value))
+  const handleChange = (value, event) => {
+    if (value[0]) {
+      setSelection(selection.concat(value[0]))
+    } else {
+      setSelection(selection.filter(item => item !== event.target.value))
+    }
   }
 
-  console.log('value:', value)
-  console.log('event.target.value:', event.target.value)
-  }
-
-  const printSelection = (event) => {
-    event.preventDefault()
-    console.log(selection)
-  }
-  
   return (
     <Container className="text-center justify-content-md-center">
       <Row>
@@ -44,13 +30,18 @@ const handleChange = (value, event) => {
         </Col>
       </Row>
 
-      <Form onSubmit={handleSubmit}>
+      <Form>
 
-        <CheckboxList onChange={handleChange}/>
+        <CheckboxList onChange={handleChange} />
 
         <Row>
           <Col>
-              <Button type="submit" onClick={printSelection}>Continue</Button>
+            <Link to={{
+              pathname: "/shop",
+              search: `sp=${selection.join("&sp=")}`
+            }}>
+              <Button type="submit">Continue</Button>
+            </Link>
           </Col>
         </Row>
 
