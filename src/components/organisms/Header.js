@@ -22,7 +22,7 @@ const StyledLogo = styled(Image)`
 
 export const Header = () => {
   return (
-    <Navbar collapseOnSelect sticky="top" expand="lg">
+    <Navbar collapseOnSelect bg="light"  sticky="top" expand="lg">
       <StyledHamburger aria-controls="basic-navbar-nav" />
 
       <LinkContainer className="order-lg-0" to="/" >

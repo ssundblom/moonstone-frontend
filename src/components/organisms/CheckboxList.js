@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-
-
+import React from 'react'
 import styled from 'styled-components'
 
 import Row from 'react-bootstrap/Row'
@@ -22,8 +20,8 @@ const StyledToggleButton = styled(ToggleButton)`
   width: 50px;
 `
 
-export const CheckboxList = () => {
-  //const [values, setValues] = useState([])
+export const CheckboxList = ({onChange}) => {
+
 
   const items = [
     { name: 'Love', content: <Icon icon="heart" size="lg" color="var(--white)"/>},
@@ -44,11 +42,11 @@ export const CheckboxList = () => {
   ]
 
   return (
-      <ButtonToolbar>
+      <ButtonToolbar  >
         <Row  xs="3" sm="3" md="3" lg="3" xl="3">
           {items.map((item, index) => (
             <Col key={item.name + index} className="my-3">
-              <ToggleButtonGroup type="checkbox" aria-label={item.name}>
+              <ToggleButtonGroup onChange={onChange} type="checkbox" aria-label={item.name}>
                 <StyledToggleButton variant="success" value={item.name}>
                   {item.content}
                 </StyledToggleButton>
