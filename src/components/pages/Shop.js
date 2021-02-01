@@ -19,8 +19,8 @@ export const Shop = (props) => {
   }, [props.location.search])
 
   return (
-    <Container className="text-center justify-content-md-center">
-      <Row xs="1" sm="1" md="2" lg="3" xl="3">
+    <Container>
+      <Row xs="1" sm="2" md="2" lg="3" xl="3" className="justify-content-center">
         {products.map(product => {
           return (
             <Col key={product._id} className="my-3">

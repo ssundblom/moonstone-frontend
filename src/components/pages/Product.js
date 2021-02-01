@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import styled from 'styled-components'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-import { Image } from 'cloudinary-react'
+import Image from 'react-bootstrap/Image'
+
+import { Cloudinary } from 'cloudinary-core'
+
+const cloudinaryCore = new Cloudinary({ cloud_name: 'moonstone-space' })
+
 
 export const Product = () => {
   const { productId } = useParams()
@@ -27,26 +33,24 @@ export const Product = () => {
     return (<p>loading ...</p>)
   } else {
     return (
-      <Container >
-        <Row>
-          <Col>
-            <Image publicId={product.images[0]} />
+      <Container>
+        <Row xs="1" sm="1" md="1" lg="2" xl="2">
+          <Col className="text-center justify-content-center">
+            <Image src={cloudinaryCore.url(product.images[0])} fluid />
           </Col>
-        </Row>
-        <Row>
-          <Col> <h3>{product.name}</h3></Col>
-        </Row>
-        <Row>
-          <Col> {product.price}kr </Col>
-        </Row>
-        <Row>
-          <Button>Buy</Button>
-        </Row>
-        <Row>
-          <Col> <b>Soul Powers:</b> <p>{product.soulPowers && product.soulPowers.join(', ')}</p></Col>
-        </Row>
-        <Row>
-          <Col> <b>About:</b> <p>{product.description}</p></Col>
+
+          <Col className="my-3">
+            <Row noGutters> <h3>{product.name}</h3></Row>
+            <Row noGutters> {product.price}kr </Row>
+
+            <Row noGutters className="my-3"> <Button>Buy</Button> </Row>
+
+            <Row noGutters><b>Soul Powers</b> </Row>
+            <Row noGutters ><p>{product.soulPowers && product.soulPowers.join(', ')}</p></Row>
+
+            <Row noGutters> <b>About</b> </Row>
+            <Row noGutters> <p>{product.description}</p></Row>
+          </Col>
         </Row>
       </Container>
     )
