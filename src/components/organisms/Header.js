@@ -33,7 +33,7 @@ export const Header = () => {
         </Nav.Link>
       </LinkContainer>
 
-      <LinkContainer className="order-lg-3" to="/shop">
+      <LinkContainer className="order-lg-3" to="/cart">
         <Nav.Link>
           <Icon icon="shopping-bag" size="lg" color="var(--secondary)" />
         </Nav.Link>
