@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Container } from 'react-bootstrap'
 import { CloudinaryContext } from 'cloudinary-react'
 
 import 'bootstrap/dist/css/bootstrap.css'
