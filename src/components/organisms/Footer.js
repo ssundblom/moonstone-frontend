@@ -19,7 +19,7 @@ export const Footer = () => {
   return (
     <StyleContainer>
       <StyledRow className="justify-content-center">
-        <StyledFooter className="align-self-center">by Sara Sundblom 2021</StyledFooter>
+        <StyledFooter className="align-self-center">by Sara Sundblom 2021 🌻 </StyledFooter>
       </StyledRow>
     </StyleContainer>
   )
