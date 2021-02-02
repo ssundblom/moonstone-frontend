@@ -9,7 +9,7 @@ export const Shop = (props) => {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:8080/products${props.location.search}`)
+    fetch(`${process.env.REACT_APP_BASE_URL}/products${props.location.search}`)
       .then((res) => {
         return res.json()
       })

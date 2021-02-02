@@ -18,7 +18,7 @@ export const Product = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    fetch(`http://localhost:8080/products/${productId}`)
+    fetch(`${process.env.REACT_APP_BASE_URL}/products/${productId}`)
       .then((res) => {
         return res.json()
       })
