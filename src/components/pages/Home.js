@@ -18,6 +18,7 @@ const StyledJumbo = styled(Jumbotron)`
 `
 const StyledH2 = styled.h2`
   color: white;
+  margin-top: 20vh;
 `
 const StyledLink = styled(Link)`
   color: white;
@@ -28,7 +29,7 @@ export const Home = () => {
       <StyledJumbo fluid>
 
         <Container className="text-center">
-          <Row style={{ height: '35vh' }} className="align-items-center align-content-around" xs="1">
+          <Row style={{ height: '40vh' }} className="align-items-center align-content-around" xs="1">
             <Col>
               <StyledH2> Find the perfect selection of soul-nurturing goodies, for you</StyledH2>
             </Col>

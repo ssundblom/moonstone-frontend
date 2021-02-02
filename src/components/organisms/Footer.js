@@ -3,10 +3,9 @@ import styled from 'styled-components'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import Image from 'react-bootstrap/Image'
 
-const StyledFooter = styled.footer`
 
-`
 const StyledRow = styled(Row)`
   height: 100%
 `
@@ -19,7 +18,10 @@ export const Footer = () => {
   return (
     <StyleContainer>
       <StyledRow className="justify-content-center">
-        <StyledFooter className="align-self-center">by Sara Sundblom 2021 🌻 </StyledFooter>
+        <footer className="text-center align-self-center">
+        <Image src={`${process.env.PUBLIC_URL}/favicon-16x16.png`} /><br/>
+           by Sara Sundblom 2021
+        </footer>
       </StyledRow>
     </StyleContainer>
   )
