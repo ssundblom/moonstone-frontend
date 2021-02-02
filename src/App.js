@@ -14,6 +14,8 @@ import { Product } from './components/pages/Product'
 import { CreateMix } from './components/pages/CreateMix'
 import { Cart } from './components/pages/Cart'
 
+import { Footer } from './components/organisms/Footer'
+
 export const App = () => {
   return (
     <CloudinaryContext cloudName="moonstone-space">
@@ -28,6 +30,7 @@ export const App = () => {
             <Route path="/articles" component={Articles} />
             <Route path="/about" component={About} />
           </Switch>
+          <Footer /> 
         </Router>
     </CloudinaryContext>
   )

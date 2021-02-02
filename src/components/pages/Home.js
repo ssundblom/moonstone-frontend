@@ -17,7 +17,12 @@ const StyledJumbo = styled(Jumbotron)`
   background-position: center center;
   height: 90vh;
 `
-
+const StyledH2 = styled.h2`
+  color: white;
+`
+const StyledLink = styled(Link)`
+  color: white;
+`
 export const Home = () => {
   return (
     <>
@@ -26,7 +31,7 @@ export const Home = () => {
         <Container className="text-center">
           <Row style={{ height: '35vh' }} className="align-items-center align-content-around" xs="1">
             <Col>
-              <p> Find the perfect selection of soul-nurturing goodies, for you</p>
+              <StyledH2> Find the perfect selection of soul-nurturing goodies, for you</StyledH2>
             </Col>
             <Col>
               <Link to="/create-mix">
@@ -34,7 +39,7 @@ export const Home = () => {
               </Link>
             </Col>
             <Col>
-              <Link to="/shop">Or browse all products</Link>
+              <StyledLink to="/shop">Or browse all products</StyledLink>
             </Col>
           </Row>
         </Container>
