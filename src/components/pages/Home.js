@@ -7,7 +7,6 @@ import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import { Link } from 'react-router-dom'
 import Jumbotron from 'react-bootstrap/Jumbotron'
-import Image from 'react-bootstrap/Image'
 
 const StyledJumbo = styled(Jumbotron)`
   padding: 0;
