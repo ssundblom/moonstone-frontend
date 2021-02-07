@@ -1,7 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { CloudinaryContext } from 'cloudinary-react'
-
+import { Provider } from 'react-redux'
+import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'theme.css'
 
@@ -13,12 +14,15 @@ import { About } from './components/pages/About'
 import { Product } from './components/pages/Product'
 import { CreateMix } from './components/pages/CreateMix'
 import { Cart } from './components/pages/Cart'
-
 import { Footer } from './components/organisms/Footer'
+import { cart } from './reducers/cart'
+
+const store = configureStore({ reducer: cart })
 
 export const App = () => {
   return (
-    <CloudinaryContext cloudName="moonstone-space">
+    <Provider store={store}>
+      <CloudinaryContext cloudName="moonstone-space">
         <Router>
           <Header />
           <Switch>
@@ -30,8 +34,9 @@ export const App = () => {
             <Route path="/articles" component={Articles} />
             <Route path="/about" component={About} />
           </Switch>
-          <Footer /> 
+          <Footer />
         </Router>
-    </CloudinaryContext>
+      </CloudinaryContext>
+    </Provider>
   )
 }

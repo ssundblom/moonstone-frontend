@@ -21,14 +21,13 @@ export const Shop = (props) => {
   return (
     <Container>
       <Row xs="1" sm="2" md="2" lg="3" xl="3" className="justify-content-center">
-        {products.map(product => {
+        {products.map((product) => {
           return (
             <Col key={product._id} className="my-3">
-              <ProductCard {...product} />
+              <ProductCard product={product} />
             </Col>
           )
-        })
-        }
+        })}
       </Row>
     </Container>
   )

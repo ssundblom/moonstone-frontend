@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -9,10 +10,12 @@ import Image from 'react-bootstrap/Image'
 
 import { Cloudinary } from 'cloudinary-core'
 
+import { cart } from '../../reducers/cart'
+
 const cloudinaryCore = new Cloudinary({ cloud_name: 'moonstone-space' })
 
-
 export const Product = () => {
+  const dispatch = useDispatch()
   const { productId } = useParams()
   const [product, setProduct] = useState({})
   const [isLoading, setIsLoading] = useState(true)
@@ -22,7 +25,7 @@ export const Product = () => {
       .then((res) => {
         return res.json()
       })
-      .then(json => {
+      .then((json) => {
         setProduct(json)
         setIsLoading(false)
       })
@@ -42,7 +45,7 @@ export const Product = () => {
             <Row noGutters> <h3>{product.name}</h3></Row>
             <Row noGutters> {product.price}kr </Row>
 
-            <Row noGutters className="my-3"> <Button>Buy</Button> </Row>
+            <Row noGutters className="my-3"><Button onClick={() => { dispatch(cart.actions.addItem(product)) }}>Buy</Button> </Row>
 
             <Row noGutters><b>Soul Powers</b> </Row>
             <Row noGutters ><p>{product.soulPowers && product.soulPowers.join(', ')}</p></Row>

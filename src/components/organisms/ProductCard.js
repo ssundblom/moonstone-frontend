@@ -1,4 +1,5 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
@@ -6,22 +7,25 @@ import Button from 'react-bootstrap/Button'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Cloudinary } from 'cloudinary-core'
 
-const cloudinaryCore = new Cloudinary({cloud_name: 'moonstone-space'})
+import { cart } from '../../reducers/cart'
 
-export const ProductCard = ({ name, price, _id, images }) => {
+const cloudinaryCore = new Cloudinary({ cloud_name: 'moonstone-space' })
+
+export const ProductCard = ({ product }) => {
+  const dispatch = useDispatch()
   return (
     <Card>
-        <LinkContainer to={`/shop/${_id}`}>
-          <Card.Img variant="top" src={cloudinaryCore.url(images[0])} />
-        </LinkContainer>
+      <LinkContainer to={`/shop/${product._id}`}>
+        <Card.Img variant="top" src={cloudinaryCore.url(product.images[0])} />
+      </LinkContainer>
       <Card.Body>
-        <LinkContainer to={`/shop/${_id}`}>
-          <Card.Title> {name} </Card.Title>
+        <LinkContainer to={`/shop/${product._id}`}>
+          <Card.Title> {product.name} </Card.Title>
         </LinkContainer>
         <Card.Text>
-          {price} kr
+          {product.price} kr
         </Card.Text>
-        <Button variant="primary">Buy</Button>
+        <Button variant="primary" onClick={() => { dispatch(cart.actions.addItem(product)) }}>Buy</Button>
       </Card.Body>
     </Card>
   )
