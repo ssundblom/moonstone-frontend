@@ -7,7 +7,8 @@ export const cart = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
-      console.log(action)
+      console.log('hej!')
+      state.items.push({ ...action.payload, quantity: 1 })
     }
   }
 })

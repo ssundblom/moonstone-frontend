@@ -1,13 +1,17 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+
+import { cart } from '../../reducers/cart'
 
 export const Cart = () => {
-  const products = []
+  const products = useSelector((store) => store.cart.items)
 
-  const totalCost = 0
+  const totalCost = useSelector((store) => (
+    store.cart.items.reduce((total, item) => (total + (item.price * item.quantity)), 0)
+  ))
 
   return (
     <Container>
@@ -17,10 +21,11 @@ export const Cart = () => {
 
       <Row>
         {products.map((product) => {
+          return (
+            <p>{product.name}</p>
+          )
         })}
-
       </Row>
     </Container>
   )
-
 }

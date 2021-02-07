@@ -48,7 +48,7 @@ export const Product = () => {
             <Row noGutters className="my-3"><Button onClick={() => { dispatch(cart.actions.addItem(product)) }}>Buy</Button> </Row>
 
             <Row noGutters><b>Soul Powers</b> </Row>
-            <Row noGutters ><p>{product.soulPowers && product.soulPowers.join(', ')}</p></Row>
+            <Row noGutters><p>{product.soulPowers && product.soulPowers.join(', ')}</p></Row>
 
             <Row noGutters> <b>About</b> </Row>
             <Row noGutters> <p>{product.description}</p></Row>

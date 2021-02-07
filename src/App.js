@@ -17,7 +17,11 @@ import { Cart } from './components/pages/Cart'
 import { Footer } from './components/organisms/Footer'
 import { cart } from './reducers/cart'
 
-const store = configureStore({ reducer: cart })
+const reducer = combineReducers({
+  cart: cart.reducer
+})
+
+const store = configureStore({ reducer })
 
 export const App = () => {
   return (
