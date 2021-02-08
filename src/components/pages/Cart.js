@@ -20,7 +20,7 @@ export const Cart = () => {
       <Row>
         {products.map((product) => {
           return (
-            <CartProductCard product={product} />
+            <CartProductCard key={product._id} product={product} />
           )
         })}
       </Row>
