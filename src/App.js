@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { CloudinaryContext } from 'cloudinary-react'
 import { Provider } from 'react-redux'
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
+import { createStore, combineReducers } from '@reduxjs/toolkit'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'theme.css'
 
@@ -21,7 +21,17 @@ const reducer = combineReducers({
   cart: cart.reducer
 })
 
-const store = configureStore({ reducer })
+const persistedStateJson = localStorage.getItem('moonstoneCart')
+let persistedState = {}
+
+if (persistedStateJson) {
+  persistedState = JSON.parse(persistedStateJson)
+}
+const store = createStore(reducer, persistedState)
+
+store.subscribe(() => {
+  localStorage.setItem('moonstoneCart', JSON.stringify(store.getState()))
+})
 
 export const App = () => {
   return (

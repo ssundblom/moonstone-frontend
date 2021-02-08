@@ -35,7 +35,7 @@ export const Home = () => {
             </Col>
             <Col>
               <Link to="/create-mix">
-                <Button>Create your mix</Button>
+                <Button>Find your selection</Button>
               </Link>
             </Col>
             <Col>
