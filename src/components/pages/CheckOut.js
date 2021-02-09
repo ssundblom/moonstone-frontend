@@ -9,7 +9,7 @@ const StyledContainer = styled(Container)`
 export const CheckOut = () => {
   return (
     <StyledContainer>
-      <p>Hey there! I'm so happy that you found something in the shop! I really hope in the near future that I'll be able to send your soul goodies to you 💕</p>
+      <p>Hey there! I'm so happy that you found something in the shop! I really hope in the near future that I'll be able to send your soul goodies to you</p>
     </StyledContainer>
   )
 }
