@@ -14,6 +14,7 @@ import { About } from './components/pages/About'
 import { Product } from './components/pages/Product'
 import { CreateMix } from './components/pages/CreateMix'
 import { Cart } from './components/pages/Cart'
+import { CheckOut } from './components/pages/CheckOut'
 import { Footer } from './components/organisms/Footer'
 import { cart } from './reducers/cart'
 
@@ -52,6 +53,7 @@ export const App = () => {
             <Route path="/cart" component={Cart} />
             <Route path="/articles" component={Articles} />
             <Route path="/about" component={About} />
+            <Route path="/checkout" component={CheckOut} />
           </Switch>
           <Footer />
         </Router>
