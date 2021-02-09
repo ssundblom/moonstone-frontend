@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
-import { cart } from '../../reducers/cart'
 import { CartProductCard } from '../organisms/CartProductCard'
 
 export const Cart = () => {
@@ -16,8 +15,7 @@ export const Cart = () => {
 
   return (
     <Container>
-
-      <Row>
+      <Row xs="1">
         {products.map((product) => {
           return (
             <CartProductCard key={product._id} product={product} />
