@@ -11,6 +11,7 @@ import Image from 'react-bootstrap/Image'
 import { Cloudinary } from 'cloudinary-core'
 
 import { cart } from '../../reducers/cart'
+import { Loading } from '../organisms/Loading'
 
 const cloudinaryCore = new Cloudinary({ cloud_name: 'moonstone-space' })
 
@@ -32,7 +33,9 @@ export const Product = () => {
   }, [productId])
 
   if (isLoading) {
-    return (<p>loading ...</p>)
+    return (
+      <Loading />
+    )
   } else {
     return (
       <Container>

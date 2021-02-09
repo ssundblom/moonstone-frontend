@@ -2,11 +2,11 @@ import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { 
-  faShoppingBag, 
-  faHeart, 
-  faWater, 
-  faHamsa, 
+import {
+  faShoppingBag,
+  faHeart,
+  faWater,
+  faHamsa,
   faFireAlt,
   faPrayingHands,
   faHandHoldingHeart,
@@ -23,8 +23,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
-  faShoppingBag, 
-  faHeart, 
+  faShoppingBag,
+  faHeart,
   faWater,
   faHamsa,
   faFireAlt,
@@ -39,7 +39,7 @@ library.add(
   faAtom,
   faExchangeAlt,
   faFistRaised
-  )
+)
 
 export const Icon = (props) => {
   return (

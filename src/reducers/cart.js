@@ -23,7 +23,6 @@ export const cart = createSlice({
       } else if (existingProduct) {
         existingProduct.quantity -= 1
       }
-
     }
   }
 })
