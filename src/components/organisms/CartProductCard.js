@@ -15,18 +15,30 @@ import { cart } from '../../reducers/cart'
 const cloudinaryCore = new Cloudinary({ cloud_name: 'moonstone-space' })
 
 const StyledCardImg = styled(Card.Img)`
-  height: 15vw;
-  width: 100%;
+  height: 100px;
+  width: 100px;
   object-fit: cover;
+`
 
+const StyledCard = styled(Card)`
+  max-height: 100px;
+  max-width: 700px;
+  margin-bottom: 20px;
+  border: none;
+`
+
+const NoMarginRow = styled(Row)`
+  margin-left: 0;
+  margin-right: 0;
 `
 
 export const CartProductCard = ({ product }) => {
   const dispatch = useDispatch()
   return (
-    <Card>
-      <Row>
-        <Col>
+    <StyledCard>
+      <NoMarginRow xs="3" className="align-items-center flex-nowrap">
+
+        <Col xs="auto">
           <LinkContainer to={`/shop/${product._id}`}>
             <StyledCardImg src={cloudinaryCore.url(product.images[0])} />
           </LinkContainer>
@@ -35,16 +47,18 @@ export const CartProductCard = ({ product }) => {
         <Col>
           <Row><Card.Title> {product.name} </Card.Title></Row>
           <Row><Card.Subtitle> {product.price} kr</Card.Subtitle></Row>
+        </Col>
 
-          <Row xs="3" className="align-items-center justify-content-center">
+        <Col className="ml-auto">
+          <Row noGutters xs="3" className="float-right align-items-center justify-content-center flex-nowrap">
             <Col xs="auto"><Button variant="white" onClick={() => dispatch(cart.actions.removeItem(product))}>-</Button></Col>
             <Col xs="auto"><Card.Text>{product.quantity}</Card.Text></Col>
             <Col xs="auto"><Button variant="white" onClick={() => dispatch(cart.actions.addItem(product))}>+</Button></Col>
           </Row>
-
         </Col>
-      </Row>
-    </Card>
+
+      </NoMarginRow>
+    </StyledCard>
 
   )
 }
