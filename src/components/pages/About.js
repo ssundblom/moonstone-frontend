@@ -1,7 +1,11 @@
 import React from 'react'
 
+import Container from 'react-bootstrap/Container'
+
 export const About = () => {
   return (
-    <p>'bout</p>
-   )
+    <Container>
+      <p>Moonstone - my final project for the Technigo bootcamp</p>
+    </Container>
+  )
 }

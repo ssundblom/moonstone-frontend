@@ -54,6 +54,9 @@ export const Header = () => {
           <LinkContainer to="/shop">
             <Nav.Link>Shop</Nav.Link>
           </LinkContainer>
+          <LinkContainer to="/create-mix">
+            <Nav.Link>Your Selection</Nav.Link>
+          </LinkContainer>
           <LinkContainer to="/articles">
             <Nav.Link>Articles</Nav.Link>
           </LinkContainer>
