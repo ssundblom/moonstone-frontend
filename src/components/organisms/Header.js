@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -20,12 +21,20 @@ const StyledLogo = styled(Image)`
   margin-top: -10px;
 `
 
+const StyledSpan = styled.span`
+  margin-right: 5px;
+`
+
 export const Header = () => {
+  const numProductsInCart = useSelector((store) => (
+    store.cart.items.reduce((total, item) => (total + item.quantity), 0)
+  ))
+
   return (
-    <Navbar collapseOnSelect bg="light"  sticky="top" expand="lg">
+    <Navbar collapseOnSelect bg="light" sticky="top" expand="lg">
       <StyledHamburger aria-controls="basic-navbar-nav" />
 
-      <LinkContainer className="order-lg-0" to="/" >
+      <LinkContainer className="order-lg-0" to="/">
         <Nav.Link>
           <Navbar.Brand className="mx-auto">
             <StyledLogo src={`${process.env.PUBLIC_URL}/logo.svg`} />
@@ -35,6 +44,7 @@ export const Header = () => {
 
       <LinkContainer className="order-lg-3" to="/cart">
         <Nav.Link>
+          <StyledSpan>{numProductsInCart}</StyledSpan>
           <Icon icon="shopping-bag" size="lg" color="var(--secondary)" />
         </Nav.Link>
       </LinkContainer>
