@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import styled from 'styled-components'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -7,6 +8,10 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
 import { CartProductCard } from '../organisms/CartProductCard'
+
+const TotalText = styled.p`
+  margin-block-end: 0;
+`
 
 export const Cart = () => {
   const products = useSelector((store) => store.cart.items)
@@ -25,8 +30,8 @@ export const Cart = () => {
         })}
       </Row>
       <Row xs="2" className="justify-content-center">
-        <Col className="justify-content-end"><p>Total: {totalCost}kr</p></Col>
-        <Col><Button>Checkout!</Button></Col>
+        <Col className="text-right  my-auto"><TotalText>Total: {totalCost}kr</TotalText></Col>
+        <Col><Button variant="dark">Checkout!</Button></Col>
 
       </Row>
     </Container>
