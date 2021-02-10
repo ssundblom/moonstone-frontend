@@ -43,16 +43,12 @@ export const Product = () => {
           <Col className="text-center justify-content-center">
             <Image src={cloudinaryCore.url(product.images[0])} fluid />
           </Col>
-
           <Col className="my-3">
             <Row noGutters> <h3>{product.name}</h3></Row>
             <Row noGutters> {product.price}kr </Row>
-
-            <Row noGutters className="my-3"><Button onClick={() => { dispatch(cart.actions.addItem(product)) }}>Buy</Button> </Row>
-
+            <Row noGutters className="my-3"><Button variant="dark" onClick={() => { dispatch(cart.actions.addItem(product)) }}>Buy</Button> </Row>
             <Row noGutters><b>Soul Powers</b> </Row>
             <Row noGutters><p>{product.soulPowers && product.soulPowers.join(', ')}</p></Row>
-
             <Row noGutters> <b>About</b> </Row>
             <Row noGutters> <p>{product.description}</p></Row>
           </Col>

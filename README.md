@@ -1,8 +1,17 @@
 #  Moonstone
 
 
-## How what wha? 
+## How what what? 
 Structured the folders after the atomic system system?
+
+## Tech I've used
+React:
+  -Redux 
+  -Bootstrap
+
+Styled Components
+Node.js
+
 
 
 ## Usage

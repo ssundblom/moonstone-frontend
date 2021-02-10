@@ -25,7 +25,7 @@ export const ProductCard = ({ product }) => {
         <Card.Text>
           {product.price} kr
         </Card.Text>
-        <Button variant="primary" onClick={() => { dispatch(cart.actions.addItem(product)) }}>Buy</Button>
+        <Button variant="dark" onClick={() => { dispatch(cart.actions.addItem(product)) }}>Buy</Button>
       </Card.Body>
     </Card>
   )
