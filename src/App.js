@@ -16,6 +16,7 @@ import { CreateMix } from './components/pages/CreateMix'
 import { Cart } from './components/pages/Cart'
 import { CheckOut } from './components/pages/CheckOut'
 import { Footer } from './components/organisms/Footer'
+
 import { cart } from './reducers/cart'
 
 const reducer = combineReducers({

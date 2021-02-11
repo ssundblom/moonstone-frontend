@@ -38,7 +38,6 @@ export const Cart = () => {
             <Button variant="dark">Checkout!</Button>
           </Link>
         </Col>
-
       </Row>
     </Container>
   )

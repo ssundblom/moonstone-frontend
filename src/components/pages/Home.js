@@ -20,7 +20,6 @@ const StyledH2 = styled.h2`
   color: white;
   margin-top: 20vh;
   text-shadow: 0px 0px 6px black;
-
 `
 const StyledLink = styled(Link)`
   color: white;

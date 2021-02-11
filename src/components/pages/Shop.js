@@ -16,7 +16,7 @@ export const Shop = (props) => {
       .then((res) => {
         return res.json()
       })
-      .then(productsJson => {
+      .then((productsJson) => {
         setProducts(productsJson)
         setIsLoading(false)
       })
