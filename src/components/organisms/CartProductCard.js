@@ -40,7 +40,7 @@ export const CartProductCard = ({ product }) => {
 
         <Col xs="auto">
           <LinkContainer to={`/shop/${product._id}`}>
-            <StyledCardImg src={cloudinaryCore.url(product.images[0])} />
+            <StyledCardImg src={cloudinaryCore.url(product.images[0], { height: 200, crop: 'scale' })} />
           </LinkContainer>
         </Col>
 

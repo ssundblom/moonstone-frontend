@@ -24,8 +24,7 @@ export const CreateMix = () => {
     <Container className="text-center justify-content-md-center">
       <Row>
         <Col className="my-5">
-          <p> Ok, we all know life can be tricky at times.
-            Where, or with what, do you feel like you need some extra support?</p>
+          <p> Ok, we all know life can be tricky at times. Where, or with what, do you feel like you need some extra support?</p>
         </Col>
       </Row>
       <Form>

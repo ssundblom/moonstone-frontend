@@ -41,7 +41,7 @@ export const Product = () => {
       <Container>
         <Row xs="1" sm="1" md="1" lg="2" xl="2">
           <Col className="text-center justify-content-center">
-            <Image src={cloudinaryCore.url(product.images[0])} fluid />
+            <Image src={cloudinaryCore.url(product.images[0], { width: 750, height: 1000, crop: 'fill' })} fluid />
           </Col>
           <Col className="my-3">
             <Row noGutters> <h3>{product.name}</h3></Row>

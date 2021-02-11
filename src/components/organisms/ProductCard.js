@@ -16,7 +16,7 @@ export const ProductCard = ({ product }) => {
   return (
     <Card>
       <LinkContainer to={`/shop/${product._id}`}>
-        <Card.Img variant="top" src={cloudinaryCore.url(product.images[0])} />
+        <Card.Img variant="top" src={cloudinaryCore.url(product.images[0], { width: 750, height: 1000, crop: 'fill' })} />
       </LinkContainer>
       <Card.Body>
         <LinkContainer to={`/shop/${product._id}`}>

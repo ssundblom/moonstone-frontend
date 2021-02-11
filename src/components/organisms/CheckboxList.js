@@ -39,7 +39,7 @@ export const CheckboxList = ({ onChange }) => {
   ]
 
   return (
-    <ButtonToolbar  >
+    <ButtonToolbar>
       <Row xs="3" sm="3" md="3" lg="3" xl="3">
         {items.map((item, index) => (
           <Col key={item.name + index} className="my-3">
