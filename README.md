@@ -12,9 +12,9 @@ React:
   -Bootstrap
 
 Styled Components
-Node.js
-MongoDB 
+
+Backend repo: https://github.com/ssundblom/moonstone-backend 
 
 ## View it Live 🌟
 https://moonstone.space/
- 
+
